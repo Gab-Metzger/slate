@@ -28,31 +28,23 @@ This example API documentation page was created with [Slate](https://github.com/
 
 > To authorize, use this code:
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: Bearer api_token"
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `api_token` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Kalendoc uses API tokens to allow access to the API. Api token is included in logged in user object.
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Kalendoc expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
+
+Or in a param included in the request url that looks like following:
+
+`&token=api_token`
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
